@@ -17,6 +17,7 @@ main {
 body {
 	background: url("img/background-img-3.png") no-repeat center top;
 	background-size: 1920px 800px;
+	background-attachment: fixed;
 }
 
 header {
@@ -72,9 +73,16 @@ nav ul li a {
 }
 
 footer {
-	position: fixed;
+	text-align: center;
 	bottom: 0;
 	width: 100%;
 	padding-bottom: 10px;
 }
 
+#charCreationForm {
+  visibility: hidden;
+  z-index: 99;
+  margin: auto;
+  padding: 10px;
+  width: 60%
+}
