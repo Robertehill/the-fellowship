@@ -13,7 +13,25 @@
   <main>
     <h1> The lord of the rings</h1>
     <h2> Choose your own adventure!</h2>
-    <button id ="startGame">Play!</button>
+    <button type="click" id ="chooseChar">Play!</button>
+    <form id="charCreationForm">
+        <p>Question 1</p>
+        <input type="radio" name="q1" value="a1" checked />elf answer<br />
+        <input type="radio" name="q1" value="a2" checked />dwarf answer<br />
+        <input type="radio" name="q1" value="a3" checked />hobbit answer<br />
+
+        <p>Question 2</p>
+        <input type="radio" name="q2" value="a1" checked />elf answer<br />
+        <input type="radio" name="q2" value="a2" checked />dwarf answer<br />
+        <input type="radio" name="q2" value="a3" checked />hobbit answer<br />
+
+        <p>Question 3</p>
+        <input type="radio" name="q3" value="a1" checked />elf answer<br />
+        <input type="radio" name="q3" value="a2" checked />dwarf answer<br />
+        <input type="radio" name="q3" value="a3" checked />hobbit answer<br />
+        <button id="startGame">Start Game!</button>
+
+    </form>
   </main>
   <footer>This is footer</footer>
   <script type="text/javascript" src="game.js"></script>
