@@ -9,6 +9,7 @@
 
 body {
 	background-color: #262623;
+	color: black;
 }
 
 
@@ -57,24 +58,9 @@ div.btn {
 }
 
 /*GLG/RS*/
-nav {
-		background-color: #D9CE96;
-		text-align: center;
-}
-
-ul li {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 100px;
-	margin-left: 100px;
-}
-
 footer {
 	color: #D9CE96;
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 10px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
 }
 
