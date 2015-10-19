@@ -44,7 +44,7 @@ var startGame = function(e) {
 				hobbit += 1;
 			}
 		}
-	}	
+	}
 
 	var q3 = document.getElementsByName('q3');
 	for (var i=0; i < q3.length; i++) {
@@ -72,8 +72,19 @@ var startGame = function(e) {
 	else if (hobbit >= dwarf && hobbit >= elf) {
 		species = "hobbit";
 	}
+
+//logs name from input
+var inputName = document.getElementById('playerName').value;
+var storedName = JSON.stringify(species);
+localStorage.setItem(inputName, storedName);
+localStorage.getItem("playerName");
+
+window.location='game.html';
 }
 
 //start game Button-REH
 document.getElementById('startGame').addEventListener('click', startGame);
+
+
+
 
