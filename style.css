@@ -42,6 +42,20 @@ div.btn {
 	margin: auto;
 }
 
+/*REH*/
+#charCreationForm{
+  visibility: hidden;
+
+  position: fixed;
+  z-index: 99;
+
+
+  margin: auto;
+  padding: 10px;
+  width: 60%
+}
+
+
 nav {
 		background-color: #D9CE96;
 		text-align: center;
@@ -62,3 +76,4 @@ footer {
 	bottom: 0;
 	width: 100%;
 }
+>>>>>>> master
