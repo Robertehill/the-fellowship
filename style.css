@@ -48,7 +48,7 @@ div.btn {
 #charCreationForm{
   visibility: hidden;
 
-  /*position: fixed;*/
+  position: fixed;
   z-index: 99;
 
 
