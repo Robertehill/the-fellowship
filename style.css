@@ -44,19 +44,6 @@ div.btn {
 	margin: auto;
 }
 
-/*REH*/
-#charCreationForm{
-  visibility: hidden;
-
-  position: fixed;
-  z-index: 99;
-
-
-  margin: auto;
-  padding: 10px;
-  width: 60%
-}
-
 /*GLG/RS*/
 footer {
 	color: #D9CE96;
