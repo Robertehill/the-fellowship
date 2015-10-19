@@ -6,13 +6,15 @@ var startCharCreation = function(e) {
 //Choose char button-REH
 document.getElementById('chooseChar').addEventListener('click', startCharCreation);
 
-var elf = 0;
-var dwarf = 0;
-var hobbit = 0;
+var species;
 
 //processes char Creation form data and saves to local storage-REH/GLG
 var startGame = function(e) {
   e.preventDefault();
+
+	var elf = 0;
+	var dwarf = 0;
+	var hobbit = 0;
 
 	var q1 = document.getElementsByName('q1');
 	for (var i=0; i < q1.length; i++) {
@@ -58,8 +60,19 @@ var startGame = function(e) {
 			}
 		}
 	}
-}
 
+	//NEED TO ADD 4TH QUESTION - GLG/REH
+
+	if (elf >= hobbit && elf >= dwarf) {
+		species = "elf";
+	}
+	else if (dwarf >= elf && dwarf >= hobbit) {
+		species = "dwarf";
+	}
+	else if (hobbit >= dwarf && hobbit >= elf) {
+		species = "hobbit";
+	}
+}
 
 //start game Button-REH
 document.getElementById('startGame').addEventListener('click', startGame);
