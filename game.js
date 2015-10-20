@@ -85,7 +85,8 @@ var startGame = function(e) {
 	var inputName = document.getElementById('playerName').value;
 	var storedName = JSON.stringify(species);
 	localStorage.setItem(inputName, storedName);
-	localStorage.getItem("playerName");
+	var storedPlayer = localStorage.getItem("playerName");
+	var parseName = JSON.parse(localStorage.getItem(storedPlayer));
 	window.location='game.html';
 }
 //start game Button-REH
