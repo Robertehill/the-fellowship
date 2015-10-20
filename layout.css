@@ -107,7 +107,7 @@ nav ul li {
 	color: white;
 	font-weight: bold;
 	min-width: 100px;
-	height: 45px;
+	height: 42px;
 }
 
 nav ul li a {
@@ -125,7 +125,9 @@ footer {
 	position: fixed;
 }
 
-
+img {
+	margin-bottom: -30px;
+}
 
 
 /*
