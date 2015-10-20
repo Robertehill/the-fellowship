@@ -1,8 +1,3 @@
-/**{
-  border: 1px solid black;
-}*/
-
-/*GLG/RS*/
 * {
 	font-family: 'Lusitana', serif;
 }
@@ -23,10 +18,11 @@ h2 {
 	color: #D9CE96;
 	text-align: center;
 	font-size: 30px;
+	margin: -3px;
 }
 
 article.welcome {
-	/*margin: auto*/
+	margin: auto;
 	text-align: center;
 }
 
@@ -37,17 +33,12 @@ button {
 	width: 200px;
 	font-size: 30px;
 	margin: 0px auto;
-}
-
-div.btn {
 	text-align: center;
 	margin: auto;
 }
 
-/*GLG/RS*/
 footer {
 	color: #D9CE96;
-	/*text-align: center;*/
 	font-size: 10px;
 }
 
