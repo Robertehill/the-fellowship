@@ -1,11 +1,3 @@
-//unhides the char creation form-REH
-// var startCharCreation = function(e) {
-//   e.preventDefault();
-//   document.getElementById('charCreationForm').style.visibility = 'visible';
-// }
-// //Choose char button-REH
-// document.getElementById('chooseChar').addEventListener('click', startCharCreation);
-
 function div_show() {
 	document.getElementById('blackout').style.display = "block";
 }

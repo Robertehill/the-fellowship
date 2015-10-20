@@ -1,33 +1,26 @@
-/**{
-  border: 1px solid black;
-}*/
-
-/*GLG/RS*/
  html, body {
 	 margin:0;
 	 padding:0;
  }
-
  #blackout {
 	width:100%;
 	height:100%;
-	opacity:.95;
+	/*opacity:.95;*/
 	top:0;
 	left:0;
 	display: none;
 	position: fixed;
-	background-color: #313131;
+	background-color: rgba(0, 0, 0, .75);
 	overflow: auto;
 }
-
 div#popup {
-	position: absolute;
-	left: 50%;
-	top: 17%;
-	margin-left: -202px;
-	opacity: 1;
-}
+	display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
 
+}
 form {
 	max-width: 500px;
 	min-width: 250px;
@@ -38,7 +31,6 @@ form {
 	font-family: 'Lusitana', serif;
 	opacity: 1;
 }
-
 main {
 	max-width: 80%;
 	margin: auto;
@@ -48,42 +40,29 @@ main {
 	background-color: rgba(248, 248, 255, .7);
 	padding: 1em;
 }
-
 body {
 	background: url("img/background-img-3.png") no-repeat center top;
 	background-size: 1920px 800px;
 	background-attachment: fixed;
 
 }
-
 header {
 	display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-	/*position: fixed;*/
 	min-width: 100%;
 	text-align: center;
 	background: rgba(0, 0, 0, .5);
-	/*height: 100px;*/
-}
 
+}
 img {
 	padding-bottom: 2em;
 }
-
 header nav {
 	display: inline-block;
 	padding: 2em 0em;
 }
-
-/*header li {
-	display: inline-block;
-	margin: auto;
-	min-width: 100px;
-	min-height: 100px;
-}*/
-
 li #header-logo {
 	margin: 0em;
 	position: absolute;
@@ -93,12 +72,10 @@ li #header-logo {
 	/*padding-bottom: 4em;*/
 	z-index: 999;
 }
-
 nav ul {
 	margin: 0em;
 	padding: 0em;
 }
-
 nav ul li {
 	display: inline-block;
 	vertical-align: middle;
@@ -109,14 +86,12 @@ nav ul li {
 	min-width: 100px;
 	height: 42px;
 }
-
 nav ul li a {
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
 	font-size: 2em;
 }
-
 footer {
 	text-align: center;
 	bottom: 0em;
@@ -124,19 +99,51 @@ footer {
 	padding-bottom: 1em;
 	position: fixed;
 }
-
 img {
 	margin-bottom: -30px;
 }
+#aboutUs{
+	display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.bioPic{
+	float: left;
+	width: 100px;
+	height: 100px;
+	padding-right: 1.5em;
+	vertical-align: top;
+}
+.bioSec{
+width: 26%;
+padding: 1em;
+border: 1px solid black;
+/*margin-bottom: 5%;*/
+min-width: 150px;
+margin-top: 5%;
+background-color: rgba(248, 248, 255, .7);
+}
+#bio1, #bio3 {
+	margin-left: 15%;
+
+}
+#bio2, #bio4 {
+	margin-right: 15%;
+
+}
+.bioName{
+	margin-top: -.25em;
+}
+section p{
+	float: bottom;
+}
+#aboutUsMain {
+	max-width: 80%;
+	margin: auto;
+	/*background-color: none;*/
+}
 
 
-/*
-#charCreationForm {
-	/*position: fixed;*/
-/*	background-color: rgba(248, 248, 255, .7);
-  visibility: hidden;
-  z-index: 99;
-  margin: auto;
-  padding: .75em;
-  width: 60%*/
-/*}
+
