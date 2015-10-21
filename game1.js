@@ -62,7 +62,8 @@
     	death(q3, b3, b4, deathbtn2);
     })
     b4.addEventListener('click', function() {
-    	itsAlive(q3, b5, b6, b3, b4);
+    	itsAlive(q3, b5, b6);
+        parentChild('q2', 'b3', 'b4')
     })
     deathbtn2.addEventListener('click', function () {
     	diediedie(q2, b3, b4, deathbtn2);
@@ -72,6 +73,7 @@
     })
     b6.addEventListener('click', function() {
     	itsAlive(q4, b7, b8, b5, b6);
+        parentChild('q3', 'b5', 'b6')
     })
     deathbtn3.addEventListener('click', function() {
     	diediedie(q3, b5, b6, deathbtn3);
@@ -81,6 +83,7 @@
     })
     b8.addEventListener('click', function() {
     	itsAlive(q5, b9, b10);
+        parentChild('q4', 'b7', 'b8')
     })
     deathbtn4.addEventListener('click', function() {
     	diediedie(q4, b7, b8, deathbtn4);
@@ -98,4 +101,6 @@
     deathbtn5.addEventListener('click', function() {
     	diediedie(q5, b9, b10, deathbtn5);
     })
+
+    
 
