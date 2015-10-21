@@ -83,9 +83,10 @@ var startGame = function(e) {
 	//maybe an "else" statement here for ties
 	//logs name from input
 	var inputName = document.getElementById('playerName').value;
-	var storedName = JSON.stringify(species);
-	localStorage.setItem(inputName, storedName);
-
+	if (inputName != "") {
+		var storedName = JSON.stringify(species);
+		localStorage.setItem(inputName, storedName);
+	};
 
 	// var storedPlayer = localStorage.getItem("playerName");
 	// var parseName = JSON.parse(localStorage.getItem(storedPlayer));

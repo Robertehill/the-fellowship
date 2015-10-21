@@ -21,6 +21,7 @@ function get_previousSibling(n) {
 	}
 	return x;
 }
+
 function Event(img, head, para, button1, button2, button3, buttonId, deathImg, deathHead, deathPara) {
 	this.img = img;
 	this.head = head;
@@ -55,7 +56,7 @@ function Event(img, head, para, button1, button2, button3, buttonId, deathImg, d
 				var endBut = document.getElementById('endGame');
 				var goBackBut = document.getElementById('goBack');
 				//console.log(get_nextSibling(loc));
-
+				//getEvent(loc);
 				if (loc === event1){
 					get_nextSibling(loc).innerHTML ="";
 					event1a.loadEvent(loc);
