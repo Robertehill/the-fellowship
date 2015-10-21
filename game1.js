@@ -101,6 +101,7 @@ b2.addEventListener('click', function() {
 })
 b3.addEventListener('click', function() {
     death(q3, b3, b4, deathbtn2);
+    b6b.hidden = true;
 })
 b4.addEventListener('click', function() {
     itsAlive(q3, b5, b6);
@@ -109,10 +110,12 @@ b4.addEventListener('click', function() {
 })
 b5.addEventListener('click', function() {
     death(q4, b5, b6, deathbtn3);
+    b6b.hidden = true;
 })
 b6.addEventListener('click', function() {
     itsAlive(q4, b7, b8, b5, b6);
     parentChild('q3', 'b5', 'b6')
+    b6b.hidden = true;
 
 })
 b7.addEventListener('click', function() {
@@ -123,21 +126,19 @@ b8.addEventListener('click', function() {
     parentChild('q4', 'b7', 'b8')
 })
 b9.addEventListener('click', function() {
-    death(q6, b9, b10, deathbtn4);
+    death(q6, b9, b10, deathbtn5);
 })
 b10.addEventListener('click', function() {
     itsAlive(q6, b11, b12);
     parentChild('q5', 'b9', 'b10')
 })
 b11.addEventListener('click', function() {
-    death(q7, b11, b12, deathbtn4);
+    death(q7, b11, b12, deathbtn6);
 })
 b12.addEventListener('click', function() {
     itsAlive(q7, b13, b14);
     parentChild('q6', 'b11', 'b12')
 })
-
-
 b13.addEventListener('click', function() {
     deathbtn7.hidden = false;
     b13.hidden = true;
@@ -163,14 +164,14 @@ b8b.addEventListener('click', function() {
     parentChild('q4b', 'b7b', 'b8b')
 })
 b9b.addEventListener('click', function() {
-    death(q6b, b9b, b10b, deathbtn4b);
+    death(q6b, b9b, b10b, deathbtn5b);
 })
 b10b.addEventListener('click', function() {
     itsAlive(q6b, b11b, b12b);
     parentChild('q5b', 'b9b', 'b10b')
 })
 b11b.addEventListener('click', function() {
-    death(q7b, b11b, b12b, deathbtn4b);
+    death(q7b, b11b, b12b, deathbtn6b);
 })
 b12b.addEventListener('click', function() {
     itsAlive(q7b, b13b, b14b);
@@ -196,6 +197,7 @@ deathbtn2.addEventListener('click', function () {
 })
 deathbtn3.addEventListener('click', function() {
     diediedie(q3, b5, b6, deathbtn3);
+    b6b.hidden = false;
 })
 deathbtn4.addEventListener('click', function() {
     diediedie(q4, b7, b8, deathbtn4);
@@ -221,7 +223,7 @@ deathbtn5b.addEventListener('click', function() {
 deathbtn6b.addEventListener('click', function() {
     diediedie(q6b, b11b, b12b, deathbtn6b);
 })
-deathbtn5.addEventListener('click', function() {
+deathbtn7b.addEventListener('click', function() {
     diediedie(q7b, b13b, b14b, deathbtn7b);
 })
 
