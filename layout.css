@@ -33,17 +33,21 @@ form {
 }
 main {
 	max-width: 80%;
-	margin: auto;
+	margin: 0 auto 0 auto;
 	background-color: rgba(248, 248, 255, .7);
 	padding-top: 1em;
-	padding-bottom: 4em;
+	padding-bottom: 3em;
+	min-height: 100%;
+	/*display: flex;*/
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 }
 section {
 	width: 80%;
 	text-align: center;
 	margin: 2em auto 1em auto;
 }
-section p {
+.gameText {
 	text-align: left;
 	margin-top: 1.5em;
 	margin-bottom: 2em;
@@ -65,8 +69,7 @@ hr {
 	/*margin-bottom: .5em;*/
 }
 button:hover {
-  background-color: #D9D991;
-  opacity: .75;
+  opacity: .65;
   cursor: pointer;
 }
 /*.welcome{
@@ -75,6 +78,11 @@ button:hover {
 }*/
 body {
 	background: url("img/background-img-3.png") no-repeat center top;
+	background-size: 1920px 800px;
+	background-attachment: fixed;
+}
+#aboutBody {
+	background: url("img/background-img-4.png") no-repeat center top;
 	background-size: 1920px 800px;
 	background-attachment: fixed;
 }
@@ -133,6 +141,7 @@ footer {
 	/*text-align: center;*/
 /*	bottom: 0em;
 	width: 100%;*/
+	padding-top: 1em;
 	padding-bottom: 1em;
 	/*position: fixed;*/
 	display: flex;
@@ -149,44 +158,59 @@ img {
 }
 #aboutUs{
 	display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  /*justify-content: space-around;*/
-}
-.bioPic{
-	float: left;
-	width: 100px;
-	height: 100px;
-	padding-right: 1.5em;
-	padding-bottom: 2em;
-	vertical-align: center;
-}
-.bioSec{
-width: 40%;
-padding: 1em;
-border: 1px solid black;
-/*margin-bottom: 5%;*/
-min-width: 150px;
-margin-top: 5%;
-background-color: rgba(248, 248, 255, .7);
+	flex-flow: row wrap;
+	align-items: center;
+	/*justify-content: space-around;*/
 }
 
-/*#bio1, #bio3 {
-	margin-left: 15%;
-}
-#bio2, #bio4 {
-	margin-right: 15%;
-}*/
-.bioName{
-	margin-top: -.25em;
-}
-section p{
-	float: left;
-}
 #aboutUsMain {
 	max-width: 80%;
 	margin: auto;
 	/*background-color: none;*/
+}
+
+.bioSec {
+	width: 40%;
+	padding: 1em;
+	border: 1px solid black;
+	/*margin-bottom: 5%;*/
+	min-width: 150px;
+	/*margin-top: 5% 0 2.5% 0;*/
+	background-color: rgba(248, 248, 255, .8);
+}
+.bioPic{
+	float: left;
+	width: 40%;
+	/*height: 30%;*/
+	/*padding-right: 1.5em;*/
+	padding-bottom: 2em;
+	/*vertical-align: center;*/
+	/*display: inline-block;*/
+}
+
+.bioName{
+	font-size: 2em;
+}
+.bioul {
+	clear: both;
+	float: left;
+	margin-top: -.5em;
+	text-align: left;
+}
+p.biotext {
+	float: left;
+	clear: both;
+	text-align: left;
+}
+/*#test {
+	clear: both;
+}*/
+#bio1, #bio2 {
+	margin-top: 5%;
+}
+#bio3, #bio4 {
+	margin-top: 2.5%;
+	margin-bottom: 5%;
 }
 
 
