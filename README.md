@@ -13,3 +13,6 @@ Afternoon: 	Pat and Robin work on CSS, styling, index.html
 Tuesday, October 20th
 Morning: 	Gina and Robin created the popup form
 			Pat and Robert started the event function
+
+Wednesday: October 21th
+Morning:	Group worked on the game1.js to make buttons functional
