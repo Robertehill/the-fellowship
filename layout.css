@@ -19,8 +19,8 @@ div#popup {
   align-items: center;
   justify-content: space-around;
   margin-top: 5%;
-
 }
+
 form {
 	max-width: 500px;
 	min-width: 250px;
@@ -35,6 +35,39 @@ main {
 	max-width: 80%;
 	margin: auto;
 	background-color: rgba(248, 248, 255, .7);
+	padding-top: 2em;
+	padding-bottom: 4em;
+}
+section {
+	width: 80%;
+	text-align: center;
+	margin: 2em auto 1em auto;
+}
+section p {
+	text-align: left;
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+hr {
+	border: 0;
+	background-color: gray;
+	height: 1px;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 2em;
+}
+.gamePic {
+	width: 80%;
+	min-width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-bottom: .5em;*/
+}
+button.game:hover {
+  background-color: #D9D991;
+  opacity: .75;
+  cursor: pointer;
 }
 .welcome{
 	background-color: rgba(248, 248, 255, .7);
@@ -44,17 +77,15 @@ body {
 	background: url("img/background-img-3.png") no-repeat center top;
 	background-size: 1920px 800px;
 	background-attachment: fixed;
-
 }
 header {
 	display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
 	min-width: 100%;
 	text-align: center;
-	background: rgba(0, 0, 0, .5);
-
+	background: rgba(0, 0, 0, .8);
 }
 img {
 	padding-bottom: 2em;
@@ -93,11 +124,19 @@ nav ul li a {
 	font-size: 2em;
 }
 footer {
-	text-align: center;
-	bottom: 0em;
-	width: 100%;
+	/*text-align: center;*/
+/*	bottom: 0em;
+	width: 100%;*/
 	padding-bottom: 1em;
-	position: fixed;
+	/*position: fixed;*/
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 4em;
+	min-width: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, .7);
 }
 img {
 	margin-bottom: -30px;
