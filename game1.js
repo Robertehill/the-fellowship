@@ -1,77 +1,99 @@
-var event1 = document.getElementById('event1');
-var event2 = document.getElementById('event2');
-var event3 = document.getElementById('event3');
-var event4 = document.getElementById('event4');
-var event5 = document.getElementById('event5');
-var event6 = document.getElementById('event6');
-var event7 = document.getElementById('event7');
-var event8 = document.getElementById('event8');
+    var b1 = document.getElementById('b1')
+    var b2 = document.getElementById('b2')
+    var b3 = document.getElementById('b3')
+    var b4 = document.getElementById('b4')
+    var b5 = document.getElementById('b5')
+    var b6 = document.getElementById('b6')
+    var b7 = document.getElementById('b7')
+    var b8 = document.getElementById('b8')
+    var b9 = document.getElementById('b9')
+    var b10 = document.getElementById('b10')
+    var q1 = document.getElementById('q1')
+    var q2 = document.getElementById('q2')
+    var q3 = document.getElementById('q3')
+    var q4 = document.getElementById('q4')
+    var q5 = document.getElementById('q5')
+    var deathbtn1 = document.getElementById('deathbtn1')
+    var deathbtn2 = document.getElementById('deathbtn2')
+    var deathbtn3 = document.getElementById('deathbtn3')
+    var deathbtn4 = document.getElementById('deathbtn4')
+    var deathbtn5 = document.getElementById('deathbtn5')
+    var reply1 = document.getElementById('reply1')
 
-function get_nextsibling(n) {
-	x = n.nextSibling;
-	while (x.nodeType != 1) {
-		x = x.nextSibling;
-	}
-	return x;
-}
+    function death (q, btn1, btn2) {
+    	q.hidden = true;
+    	btn1.hidden = true;
+    	btn2.hidden = true;
+    }
 
-function Event(img, head, para, button1, button2, buttonId, deathImg, deathHead, deathPara) {
-	this.img = img;
-	this.head = head;
-	this.para = para;
-	this.button1 = button1;
-	this.button2 = button2;
-	this.buttonId = buttonId;
-	// this.deathImg = deathImg;
-	// this.deathHead = deathHead;
-	// this.deathPara = deathPara;
+    function diediedie (q, btn1, btn2, deathbtn) {
+    	q.hidden = false;
+    	btn1.hidden = false;
+    	btn2.hidden = false;
+    	deathbtn.hidden = true;
+    }
 
-	this.loadEvent = function(loc) {
-		// var butt1 = document.createElement('button')
-		// loc.innerHTML = '<img src="' + this.img + '" /><h2>' + this.head + '</h2><p>' + this.para + '</p> <button id="' + this.buttonId + 'button1" type="click">' + this.button1 + '</button><button id="' + this.buttonId + 'button2" type="click">' + this.button2 + '</button>';
 
-		loc.innerHTML = '<img src="' + img + '" /><h2>' + head + '</h2><p>' + para + '</p> <button id="' + buttonId + 'button1" type="click">' + button1 + '</button><button id="' + buttonId + 'button2" type="click">' + button2 + '</button>';
+    // function get_previousSibling(n) {
+    // 	x = n.previousSibling;
+    // 	while (x.nodeType != 1){
+    // 		x = x.previousSibling;
+    // 	}
+    // 	return x;
+    // }
 
-		var option1 = this.buttonId + 'button1';
-		document.getElementById(option1).addEventListener('click', function(){
-			// var x = document.getElementById(loc).nextSibling;
-			// deathEvent(event, get_nextsibling(loc), this.deathPara);
-			get_nextsibling(loc).innerHTML = '<img src="' + deathImg + '" /><h2>' + deathHead + '</h2><p>' + deathPara + '</p>';
-		});
+    b1.addEventListener('click', function() {
+    	deathbtn1.hidden = false;
+    	death(q2, b1, b2);
+    })
+    b2.addEventListener('click', function() {
+    	q2.hidden = false;
+    	b3.hidden = false;
+    	b4.hidden = false;
+    })
+    deathbtn1.addEventListener('click', function () {
+    	diediedie(q1, b1, b2, deathbtn1);
+    })
+    b3.addEventListener('click', function() {
+    	deathbtn2.hidden = false;
+    	death(q3, b3, b4);
+    })
+     deathbtn2.addEventListener('click', function () {
+    	diediedie(q2, b3, b4, deathbtn2);
+    })   
+    b4.addEventListener('click', function() {
+    	q3.hidden = false;
+    	b5.hidden = false;
+    	b6.hidden = false;
+    })
 
-		var option2 = this.buttonId + 'button2';
-		document.getElementById(option2).addEventListener('click', function(){
-			// var x = document.getElementById(loc).nextSibling;
-			// deathEvent(event, get_nextsibling(loc), this.deathPara);
-			// get_nextsibling(loc).innerHTML = '<img src="' + event2Dwarf.img + '" /><h2>' + event2Dwarf.head + '</h2><p>' + event2Dwarf.para + '</p>';
-			if (option2 === 'startbutton2'){
-				event2Dwarf.loadEvent(event2);
-			}
-		});
-
-		// 	get_nextsibling(loc).innerHTML = deathPara;
-		// });
-
-		// this.buttonId + 'button2'.addEventListener('click', passEvent);
-
-	};
-}
-
-var deathEvent = function(e, loc, deathPara) {
-	e.preventDefault();
-}
-for (var key in localStorage){
-	console.log(key);
-}
-
-var event1Dwarf = new Event('img/game/event1Dwarf.jpg', 'Congrats ' + key + ', you are a ' + localStorage.getItem(key) +'!' , 'Lorem ipsum dolor sit amet, sonet elitr usu cu. Voluptaria mediocritatem nam at, nam probo dolorum debitis ex. Ne vide aeque duo, qui enim invenire mnesarchum et.', 'event1Dwarf Button1', 'event1Dwarf Button2', 'start', 'img/game/death.jpg', 'event1Dwarf death headline', 'death text here. you\'re dead.');
-// var startElf = new Event('intro', 'img/game/start.jpg', 'Congrats username are a elf!', 'Lorem ipsum dolor sit amet, sonet elitr usu cu. Voluptaria mediocritatem nam at, nam probo dolorum debitis ex. Ne vide aeque duo, qui enim invenire mnesarchum et.', 'startElf Button 1', 'startElf Button2');
-// var startHobbit = new Event('intro', 'img/game/start.jpg', 'Congrats username are a hobbit!', 'Lorem ipsum dolor sit amet, sonet elitr usu cu. Voluptaria mediocritatem nam at, nam probo dolorum debitis ex. Ne vide aeque duo, qui enim invenire mnesarchum et.', 'startHobbit Button 1', 'startHobbit Button2');
-
-var event2Dwarf = new Event('img/game/event2.jpg', 'Event 2 headline!', 'Lorem ipsum dolor sit amet, sonet elitr usu cu. Voluptaria mediocritatem nam at, nam probo dolorum debitis ex. Ne vide aeque duo, qui enim invenire mnesarchum et.', 'event2Dwarf Button 1', 'eventDwarf Button2', 'event2Dwarf');
-
-event1Dwarf.loadEvent(event1);
-// event1Dwarf.loadEvent(event1);
-
+    b5.addEventListener('click', function() {
+    	deathbtn3.hidden = false;
+    	death(q4, b5, b6);
+    })
+    b6.addEventListener('click', function() {
+    	q4.hidden = false;	
+    	b7.hidden = false;
+    	b8.hidden = false;
+    })
+    b7.addEventListener('click', function() {
+    	deathbtn4.hidden = false;
+    	death(q5, b7, b8);
+    })
+    b8.addEventListener('click', function() {
+    	q5.hidden = false;
+    	b9.hidden = false
+    	b10.hidden = false;
+    })
+    b9.addEventListener('click', function() {
+    	deathbtn5.hidden = false;
+    	b9.hidden = true;
+    	b10.hidden = true;
+    })
+    b10.addEventListener('click', function() {
+    	b9.hidden = true;
+    	b10.hidden = true;
+    	reply1.hidden = false;
+    })
 
 
