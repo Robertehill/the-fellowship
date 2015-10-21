@@ -27,27 +27,26 @@ article.welcome {
 }
 
 button {
-	border: none;
 	background: #F2EBC9;
 	color: #736830;
-	width: 200px;
-	font-size: 30px;
+	width: 40%;
 	margin: 0px auto;
 	text-align: center;
 	margin: auto;
+	padding-left: 1em;
+	border: 1px solid #736830;
+	font-size: 110%;
 }
 
 button.game {
-	border: none;
 	background: #F2EBC9;
 	color: #736830;
 	width: 85%;
 	height: 4em;
-	font-size: 1.25em;
+	font-size: 110%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-	/*padding: 20px 5px 10px 5px;*/
+	text-align: left;
 	padding-left: 1em;
 	border: 1px solid #736830;
 }

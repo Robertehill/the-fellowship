@@ -12,15 +12,16 @@
 <body id="body" style="overflow:hidden;">
 
   <header>
+    <a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a>
     <nav>
       <ul>
-        <li><a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a></li>
         <li><a title="Game" alt="game" href="game.html">Game</a></li>
         <li><a title="Game" alt="game" href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
 
+<main>
   <div id="blackout">
   <div id="popup">
     <form id="charCreationForm" method="post" name="form">
@@ -52,17 +53,18 @@
  </div>
 </div>
 
-    <main>
 
-   <article class="welcome">
-
-    <img src="img/fellowship-index.jpg" width="60%">
     <h2>Your journey awaits you...</h2>
+   <article class="welcome">
+    <section>
+
+    <img class="gamePic" src="img/fellowship-index.jpg">
     <p>Lorem ipsum dolor sit amet, sonet elitr usu cu. Voluptaria mediocritatem nam at, nam probo dolorum debitis ex. Ne vide aeque duo, qui enim invenire mnesarchum et. Te est deseruisse disputationi. Mel feugiat gubergren cotidieque eu, detraxit expetenda deseruisse ex sea, duo an diceret bonorum phaedrum. Ius ea audiam virtute reprimique.</p>
 
      <button id="chooseChar" onclick="div_show()">Play!</button>
+    </section>
   </article>
-  </main>
+</main>
   <footer>Copyright 2015 by the Fellowship/CodeFellows SEA-B34-Foundations</footer>
 
   <script type="text/javascript" src="game.js"></script>
