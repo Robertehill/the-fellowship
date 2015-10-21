@@ -5,8 +5,12 @@ function div_show() {
 function div_hide(){
 document.getElementById('blackout').style.display = "none";
 }
-
-var species;
+var player = {
+ pName: null,
+ species: null,
+ gameStage: null
+};
+//var species;
 //processes char Creation form data and saves to local storage-REH/GLG
 var startGame = function(e) {
   e.preventDefault();
@@ -72,21 +76,23 @@ var startGame = function(e) {
 		}
 	}
 	if (elf >= hobbit && elf >= dwarf) {
-		species = "elf";
+		player.species = "elf";
 	}
 	else if (dwarf >= elf && dwarf >= hobbit) {
-		species = "dwarf";
+		player.species = "dwarf";
 	}
 	else if (hobbit >= dwarf && hobbit >= elf) {
-		species = "hobbit";
+		player.species = "hobbit";
 	}
 	//maybe an "else" statement here for ties
 	//logs name from input
-	var inputName = document.getElementById('playerName').value;
-	var storedName = JSON.stringify(species);
-	localStorage.setItem(inputName, storedName);
-	var storedPlayer = localStorage.getItem("playerName");
-	var parseName = JSON.parse(localStorage.getItem(storedPlayer));
+	if(document.getElementById('playerName').value ===""){
+		alert("Please enter a name")
+		return;
+	}
+	player.pName = document.getElementById('playerName').value;
+	var storedPlayer = JSON.stringify(player);
+	localStorage.setItem("LOTR", storedPlayer);
 	window.location='game.html';
 }
 //start game Button-REH
