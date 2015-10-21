@@ -20,10 +20,11 @@
     var deathbtn5 = document.getElementById('deathbtn5')
     var reply1 = document.getElementById('reply1')
 
-    function death (q, btn1, btn2) {
+    function death (q, btn1, btn2, deathbtn) {
     	q.hidden = true;
     	btn1.hidden = true;
     	btn2.hidden = true;
+    	deathbtn.hidden = false;
     }
 
     function diediedie (q, btn1, btn2, deathbtn) {
@@ -33,57 +34,56 @@
     	deathbtn.hidden = true;
     }
 
+    function itsAlive (q, btn1, btn2) {
+    	q.hidden = false;
+    	btn1.hidden = false;
+    	btn2.hidden = false;
+    }
 
-    // function get_previousSibling(n) {
-    // 	x = n.previousSibling;
-    // 	while (x.nodeType != 1){
-    // 		x = x.previousSibling;
-    // 	}
-    // 	return x;
-    // }
+    function parentChild (q, btn1, btn2) {
+    	var parent = document.getElementById(q);
+ 		var child1 = document.getElementById(btn1);
+ 		var child2 = document.getElementById(btn2);
+  		parent.removeChild(child1);
+  		parent.removeChild(child2);
+    }
 
     b1.addEventListener('click', function() {
-    	deathbtn1.hidden = false;
-    	death(q2, b1, b2);
+    	death(q2, b1, b2, deathbtn1);
     })
     b2.addEventListener('click', function() {
-    	q2.hidden = false;
-    	b3.hidden = false;
-    	b4.hidden = false;
+    	itsAlive(q2, b3, b4);
+    	parentChild('q1', 'b1', 'b2');
     })
     deathbtn1.addEventListener('click', function () {
     	diediedie(q1, b1, b2, deathbtn1);
     })
     b3.addEventListener('click', function() {
-    	deathbtn2.hidden = false;
-    	death(q3, b3, b4);
+    	death(q3, b3, b4, deathbtn2);
     })
-     deathbtn2.addEventListener('click', function () {
+    b4.addEventListener('click', function() {
+    	itsAlive(q3, b5, b6, b3, b4);
+    })
+    deathbtn2.addEventListener('click', function () {
     	diediedie(q2, b3, b4, deathbtn2);
     })   
-    b4.addEventListener('click', function() {
-    	q3.hidden = false;
-    	b5.hidden = false;
-    	b6.hidden = false;
-    })
-
     b5.addEventListener('click', function() {
-    	deathbtn3.hidden = false;
-    	death(q4, b5, b6);
+    	death(q4, b5, b6, deathbtn3);
     })
     b6.addEventListener('click', function() {
-    	q4.hidden = false;	
-    	b7.hidden = false;
-    	b8.hidden = false;
+    	itsAlive(q4, b7, b8, b5, b6);
+    })
+    deathbtn3.addEventListener('click', function() {
+    	diediedie(q3, b5, b6, deathbtn3);
     })
     b7.addEventListener('click', function() {
-    	deathbtn4.hidden = false;
-    	death(q5, b7, b8);
+    	death(q5, b7, b8, deathbtn4);
     })
     b8.addEventListener('click', function() {
-    	q5.hidden = false;
-    	b9.hidden = false
-    	b10.hidden = false;
+    	itsAlive(q5, b9, b10);
+    })
+    deathbtn4.addEventListener('click', function() {
+    	diediedie(q4, b7, b8, deathbtn4);
     })
     b9.addEventListener('click', function() {
     	deathbtn5.hidden = false;
@@ -95,5 +95,7 @@
     	b10.hidden = true;
     	reply1.hidden = false;
     })
-
+    deathbtn5.addEventListener('click', function() {
+    	diediedie(q5, b9, b10, deathbtn5);
+    })
 
