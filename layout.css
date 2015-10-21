@@ -76,8 +76,13 @@ button:hover {
 	background-color: rgba(248, 248, 255, .7);
 	padding: 1em;
 }*/
-body {
+#indexBody {
 	background: url("img/background-img-3.png") no-repeat center top;
+	background-size: 1920px 800px;
+	background-attachment: fixed;
+}
+#gameBody {
+	background: url("img/background-img-5.png") no-repeat center top;
 	background-size: 1920px 800px;
 	background-attachment: fixed;
 }
