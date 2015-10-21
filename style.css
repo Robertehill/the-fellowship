@@ -37,6 +37,16 @@ button {
 	margin: auto;
 }
 
+button.game {
+	border: none;
+	background: #F2EBC9;
+	color: #A69856;
+	width: 800px;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+}
+
 footer {
 	color: #D9CE96;
 	font-size: 10px;
