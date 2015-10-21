@@ -18,36 +18,58 @@
     var deathbtn3 = document.getElementById('deathbtn3')
     var deathbtn4 = document.getElementById('deathbtn4')
     var deathbtn5 = document.getElementById('deathbtn5')
-    var reply = document.getElementById('reply')
+    var reply1 = document.getElementById('reply1')
 
+    function death (q, btn1, btn2) {
+    	q.hidden = true;
+    	btn1.hidden = true;
+    	btn2.hidden = true;
+    }
+
+    function diediedie (q, btn1, btn2, deathbtn) {
+    	q.hidden = false;
+    	btn1.hidden = false;
+    	btn2.hidden = false;
+    	deathbtn.hidden = true;
+    }
+
+
+    // function get_previousSibling(n) {
+    // 	x = n.previousSibling;
+    // 	while (x.nodeType != 1){
+    // 		x = x.previousSibling;
+    // 	}
+    // 	return x;
+    // }
 
     b1.addEventListener('click', function() {
-    	q2.hidden = true;
     	deathbtn1.hidden = false;
-    	b1.hidden = true;
-    	b2.hidden = true;
+    	death(q2, b1, b2);
     })
     b2.addEventListener('click', function() {
     	q2.hidden = false;
     	b3.hidden = false;
     	b4.hidden = false;
     })
-    b3.addEventListener('click', function() {
-    	q3.hidden = true;
-    	deathbtn2.hidden = false;
-    	b3.hidden = true;
-    	b4.hidden = true;
+    deathbtn1.addEventListener('click', function () {
+    	diediedie(q1, b1, b2, deathbtn1);
     })
+    b3.addEventListener('click', function() {
+    	deathbtn2.hidden = false;
+    	death(q3, b3, b4);
+    })
+     deathbtn2.addEventListener('click', function () {
+    	diediedie(q2, b3, b4, deathbtn2);
+    })   
     b4.addEventListener('click', function() {
     	q3.hidden = false;
     	b5.hidden = false;
     	b6.hidden = false;
     })
+
     b5.addEventListener('click', function() {
-    	q4.hidden = true;
     	deathbtn3.hidden = false;
-    	b5.hidden = true;
-    	b6.hidden = true;
+    	death(q4, b5, b6);
     })
     b6.addEventListener('click', function() {
     	q4.hidden = false;	
@@ -55,27 +77,23 @@
     	b8.hidden = false;
     })
     b7.addEventListener('click', function() {
-    	q5.hidden = true;
     	deathbtn4.hidden = false;
-    	b7.hidden = true;
-    	b8.hidden = true;
+    	death(q5, b7, b8);
     })
     b8.addEventListener('click', function() {
     	q5.hidden = false;
     	b9.hidden = false
     	b10.hidden = false;
     })
-
     b9.addEventListener('click', function() {
-    	q5.hidden = true;
     	deathbtn5.hidden = false;
     	b9.hidden = true;
     	b10.hidden = true;
     })
     b10.addEventListener('click', function() {
-    	b9.hidden = false;
-    	b10.hidden = false;
-    	reply.hidden = false;
+    	b9.hidden = true;
+    	b10.hidden = true;
+    	reply1.hidden = false;
     })
 
 
