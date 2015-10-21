@@ -11,13 +11,13 @@ body {
 h1 {
 	color: #A69856;
 	text-align: center;
-	font-size: 40px;
+	font-size: 3em;
 }
 
 h2 {
-	color: #D9CE96;
+	color: #736830;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2.5em;
 	margin: -3px;
 }
 
@@ -29,7 +29,7 @@ article.welcome {
 button {
 	border: none;
 	background: #F2EBC9;
-	color: #A69856;
+	color: #736830;
 	width: 200px;
 	font-size: 30px;
 	margin: 0px auto;
@@ -40,11 +40,16 @@ button {
 button.game {
 	border: none;
 	background: #F2EBC9;
-	color: #A69856;
-	width: 800px;
-	font-size: 20px;
-	margin: auto;
+	color: #736830;
+	width: 85%;
+	height: 4em;
+	font-size: 1.25em;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+	/*padding: 20px 5px 10px 5px;*/
+	padding-left: 1em;
+	border: 1px solid #736830;
 }
 
 footer {
