@@ -176,12 +176,24 @@ section {
 }
 .gamePic {
 	width: 80%;
-	/*min-width: 300px;*/
+	min-width: 300px;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
 	/*margin-bottom: .5em;*/
 	padding-bottom: 1.5em;
+}
+
+.deathPic {
+	width: 80%;
+	min-width: 300px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-bottom: .5em;*/
+	/*padding-bottom: 1.5em;*/
+	margin-top: 2em;
+	margin-bottom: -1em;
 }
 
 .gameText {
@@ -239,7 +251,10 @@ button:hover {
 
 .bioPic {
 	float: left;
-	width: 40%;
+	width: 165px;
+	height: 165px;
+	min-width: 100px
+	min-height:100px;
 	/*height: 30%;*/
 	/*padding-right: 1.5em;*/
 	/*padding-bottom: .;*/
