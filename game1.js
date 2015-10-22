@@ -67,10 +67,6 @@ function loadGame(){
     player.gameStage = parseChar.gameStage;
 
     switch(player.gameStage){
-        case 'event1':
-            //load right section
-            break;
-
         case 'event2':
             itsAlive(ident.q2, ident.b3, ident.b4);
             parentChild('q1', 'b1', 'b2');
@@ -196,7 +192,13 @@ function saveGame() {
 if (savedChar != null){
     loadGame();
 };
-document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are a ' + player.species +'!';
+if (player.species === "elf"){
+    document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are an ' + player.species +'!';
+}
+else{
+   document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are a ' + player.species +'!';
+
+}
 function death (q, btn1, btn2, deathbtn) {
 	q.hidden = true;
 	btn1.hidden = true;
