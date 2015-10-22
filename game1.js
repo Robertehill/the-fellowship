@@ -74,29 +74,50 @@ function death (q, btn1, btn2, deathbtn) {
 	deathbtn.hidden = false;
 }
 
-function diediedie (q, btn1, btn2, deathbtn) {
+function diediedie (q, btn1, btn2, deathbtn, array) {
 	q.hidden = false;
 	btn1.hidden = false;
 	btn2.hidden = false;
 	deathbtn.hidden = true;
+    console.log('hide' + q +' '+btn1+' '+ btn2);
+    console.log('unhide' + deathbtn);
+
+    var parent = document.getElementsByClassName("gameText")[array];
+    var child = document.getElementsByClassName("deathPic")[0];
+    console.log("parent ="+parent+' child = '+child);
+    parent.removeChild(child);
+
 }
 
 function itsAlive (q, btn1, btn2) {
 	q.hidden = false;
 	btn1.hidden = false;
 	btn2.hidden = false;
+    console.log("hide" + q +' '+btn1+' '+ btn2);
 }
 
 function parentChild (q, btn1, btn2) {
 	var parent = document.getElementById(q);
 	var child1 = document.getElementById(btn1);
 	var child2 = document.getElementById(btn2);
-	parent.removeChild(child1);
-	parent.removeChild(child2);
+    console.log('remove '+btn1+' '+ btn2);
+    parent.removeChild(child1);
+    parent.removeChild(child2);
+}
+function deathPic(q, src) {
+    var blah = q.getElementsByClassName("gameText")[0];
+    var deathpic = document.createElement('img');
+    deathpic.src = src;
+    // deathpic.src = "img/game/drunkdeath.gif";
+    deathpic.className = 'deathPic';
+    blah.appendChild(deathpic);
 }
 
 ident.b1.addEventListener('click', function() {
 	death(ident.q2, ident.b1, ident.b2, ident.deathbtn1);
+    deathPic(ident.q1, "img/game/drunkdeath.gif");
+
+
 })
 ident.b2.addEventListener('click', function() {
 	itsAlive(ident.q2, ident.b3, ident.b4);
@@ -104,6 +125,7 @@ ident.b2.addEventListener('click', function() {
 })
 ident.b3.addEventListener('click', function() {
     death(ident.q3, ident.b3, ident.b4, ident.deathbtn2);
+     deathPic(ident.q2, "img/game/death.jpg");
     ident.b6b.hidden = true;
 })
 ident.b4.addEventListener('click', function() {
@@ -113,6 +135,7 @@ ident.b4.addEventListener('click', function() {
 })
 ident.b5.addEventListener('click', function() {
     death(ident.q4, ident.b5, ident.b6, ident.deathbtn3);
+    deathPic(ident.q3, "img/game/boromirdeath.gif");
     b6b.hidden = true;
 })
 ident.b6.addEventListener('click', function() {
@@ -123,6 +146,7 @@ ident.b6.addEventListener('click', function() {
 })
 ident.b7.addEventListener('click', function() {
     death(ident.q5, ident.b7, ident.b8, ident.deathbtn4);
+    deathPic(ident.q4, "img/game/deadmarshes.gif");
 })
 ident.b8.addEventListener('click', function() {
     itsAlive(ident.q5, ident.b9, ident.b10);
@@ -202,26 +226,26 @@ ident.b14b.addEventListener('click', function() {
 
 
 ident.deathbtn1.addEventListener('click', function () {
-    diediedie(ident.q1, ident.b1, ident.b2, ident.deathbtn1);
+    diediedie(ident.q1, ident.b1, ident.b2, ident.deathbtn1,0);
 })
 ident.deathbtn2.addEventListener('click', function () {
-    diediedie(ident.q2, ident.b3, ident.b4, ident.deathbtn2);
+    diediedie(ident.q2, ident.b3, ident.b4, ident.deathbtn2,1);
 })
 ident.deathbtn3.addEventListener('click', function() {
-    diediedie(ident.q3, ident.b5, ident.b6, ident.deathbtn3);
+    diediedie(ident.q3, ident.b5, ident.b6, ident.deathbtn3,2);
     ident.b6b.hidden = false;
 })
 ident.deathbtn4.addEventListener('click', function() {
-    diediedie(ident.q4, ident.b7, ident.b8, ident.deathbtn4);
+    diediedie(ident.q4, ident.b7, ident.b8, ident.deathbtn4,3);
 })
 ident.deathbtn5.addEventListener('click', function() {
-    diediedie(ident.q5, ident.b9, ident.b10, ident.deathbtn5);
+    diediedie(ident.q5, ident.b9, ident.b10, ident.deathbtn5,4);
 })
 ident.deathbtn6.addEventListener('click', function() {
-    diediedie(ident.q6, ident.b11, ident.b12, ident.deathbtn6);
+    diediedie(ident.q6, ident.b11, ident.b12, ident.deathbtn6,5);
 })
 ident.deathbtn7.addEventListener('click', function() {
-    diediedie(ident.q7, ident.b13, ident.b14, ident.deathbtn7);
+    diediedie(ident.q7, ident.b13, ident.b14, ident.deathbtn7,6);
 })
 deathbtn8.addEventListener('click', function() {
     diediedie(q8, b15, b16, deathbtn8);
@@ -229,16 +253,16 @@ deathbtn8.addEventListener('click', function() {
 
 
 ident.deathbtn4b.addEventListener('click', function() {
-    diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b);
+    diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b,7);
 })
 ident.deathbtn5b.addEventListener('click', function() {
-    diediedie(ident.q5b, ident.b9b, ident.b10b, ident.deathbtn5b);
+    diediedie(ident.q5b, ident.b9b, ident.b10b, ident.deathbtn5b,8);
 })
 ident.deathbtn6b.addEventListener('click', function() {
-    diediedie(ident.q6b, ident.b11b, ident.b12b, ident.deathbtn6b);
+    diediedie(ident.q6b, ident.b11b, ident.b12b, ident.deathbtn6b,9);
 })
 ident.deathbtn7b.addEventListener('click', function() {
-    diediedie(ident.q7b, ident.b13b, ident.b14b, ident.deathbtn7b);
+    diediedie(ident.q7b, ident.b13b, ident.b14b, ident.deathbtn7b,10);
 })
 
 
