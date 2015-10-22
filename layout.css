@@ -228,6 +228,7 @@ button:hover {
 
 .bioSec {
 	width: 40%;
+	min-height: 475px;
 	padding: 1em;
 	border: 1px solid black;
 	/*margin-bottom: 5%;*/
