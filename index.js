@@ -3,12 +3,12 @@ function div_show() {
 }
 
 function div_hide(){
-document.getElementById('blackout').style.display = "none";
+	document.getElementById('blackout').style.display = "none";
 }
 var player = {
- pName: null,
- species: null,
- gameStage: null
+	pName: null,
+	species: null,
+	gameStage: null
 };
 //var species;
 //processes char Creation form data and saves to local storage-REH/GLG
