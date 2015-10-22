@@ -8,14 +8,14 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body id="indexBody">
-
+<body class="home" id="">
+<div id ="indexBody">
   <header>
     <a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a>
     <nav>
       <ul>
-        <li><a title="Game" alt="game" href="game.html">Game</a></li>
-        <li><a title="Game" alt="game" href="about.html">About</a></li>
+        <li><a class="game" title="Game" alt="game" href="game.html">Game</a></li>
+        <li><a class="about" title="Game" alt="game" href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
@@ -24,25 +24,25 @@
   <div id="blackout">
   <div id="popup">
     <form id="charCreationForm" method="post" name="form">
-        <p>Tell us your name:
+        <p class="form-text">Tell us your name:
         <input type="text" placeholder="Name" id="playerName"> </P>
 
-        <p>What's your idea of the perfect meal?</p>
+        <p class="form-text">What's your idea of the perfect meal?</p>
         <input type="radio" name="q1" value="elf" checked />A salad picked from a fresh garden<br />
         <input type="radio" name="q1" value="dwarf"  />A big chunk of beef and a beer<br />
         <input type="radio" name="q1" value="hobbit"  />A nice, hot rabbit stew<br />
 
-        <p>What's your weapon of choice?</p>
+        <p class="form-text">What's your weapon of choice?</p>
         <input type="radio" name="q2" value="elf" checked />Bow and arrow<br />
         <input type="radio" name="q2" value="dwarf" />Axe<br />
         <input type="radio" name="q2" value="hobbit" />Rocks<br />
 
-        <p>What's your idea of te perfect vacation?</p>
+        <p class="form-text">What's your idea of te perfect vacation?</p>
         <input type="radio" name="q3" value="elf" checked />Communing with the forest<br />
         <input type="radio" name="q3" value="dwarf" />Drinking in a mine<br />
         <input type="radio" name="q3" value="hobbit"  />Spending the week at the Green Dragon singing and drinking<br />
 
-        <p>Where can you be found when a battle is about to begin?</p>
+        <p class="form-text">Where can you be found when a battle is about to begin?</p>
         <input type="radio" name="q4" value="elf" checked />At the top of the helm<br />
         <input type="radio" name="q4" value="dwarf" />Front and center<br />
         <input type="radio" name="q4" value="hobbit" />In the kitchen eating second breakfast<br /><br />
@@ -69,5 +69,6 @@
   </footer>
 
   <script type="text/javascript" src="index.js"></script>
+</div>
 </body>
 </html5>
