@@ -47,22 +47,23 @@ var reply1 = document.getElementById('reply1');
 var reply2 = document.getElementById('reply2');
 
 var player = {
- pName: null,
- species: null,
- gameStage: null
+    pName: "Guest",
+    species: "hobbit",
+    gameStage: null
 };
-
-function loadGame() {
-  var savedChar = localStorage.getItem("LOTR");
+var savedChar = localStorage.getItem("LOTR");
+function loadGame(){
+    var savedChar = localStorage.getItem("LOTR");
     var parseChar = JSON.parse(savedChar);
     // console.log(parseChar);
-    if (parseChar != null || parseChar != ""){
-        player.pName = parseChar.pName;
-        player.species = parseChar.species;
-        player.gameStage = parseChar.gameStage;
-    }
+    player.pName = parseChar.pName;
+    player.species = parseChar.species;
+    player.gameStage = parseChar.gameStage;
+
 }
-loadGame();
+if (savedChar != null ){
+    loadGame();
+};
 document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are a ' + player.species +'!';
 function death (q, btn1, btn2, deathbtn) {
 	q.hidden = true;
