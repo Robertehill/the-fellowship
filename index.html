@@ -25,11 +25,13 @@
   </header>
 
 <main>
-  <div id="blackout" onclick ="div_hide()">
+  <div id="blackout">
   <div id="popup">
     <form id="charCreationForm" method="post" name="form">
+
+        <img id="close" src="img/game/closeButton.png" onclick ="div_hide()">
         <p class="form-text">Tell us your name:
-        <input type="text" placeholder="Name" id="playerName"> </P>
+        <input type="text" placeholder="Name" id="playerName"> </p>
 
         <p class="form-text">What's your idea of the perfect meal?</p>
         <input type="radio" name="q1" value="elf" checked />A salad picked from a fresh garden<br />
