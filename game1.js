@@ -13,6 +13,8 @@ var ident = {
     b12: document.getElementById('b12'),
     b13: document.getElementById('b13'),
     b14: document.getElementById('b14'),
+    b15: document.getElementById('b15'),
+    b16: document.getElementById('b16'),
     b6b: document.getElementById('b6b'),
     b7b: document.getElementById('b7b'),
     b8b: document.getElementById('b8b'),
@@ -29,6 +31,7 @@ var ident = {
     q5: document.getElementById('q5'),
     q6: document.getElementById('q6'),
     q7: document.getElementById('q7'),
+    q8: document.getElementById('q8'),
     q4b: document.getElementById('q4b'),
     q5b: document.getElementById('q5b'),
     q6b: document.getElementById('q6b'),
@@ -40,6 +43,7 @@ var ident = {
     deathbtn5: document.getElementById('deathbtn5'),
     deathbtn6: document.getElementById('deathbtn6'),
     deathbtn7: document.getElementById('deathbtn7'),
+    deathbtn8: document.getElementById('deathbtn8'),
     deathbtn4b: document.getElementById('deathbtn4b'),
     deathbtn5b: document.getElementById('deathbtn5b'),
     deathbtn6b: document.getElementById('deathbtn6b'),
@@ -125,7 +129,7 @@ ident.b2.addEventListener('click', function() {
 })
 ident.b3.addEventListener('click', function() {
     death(ident.q3, ident.b3, ident.b4, ident.deathbtn2);
-     deathPic(ident.q2, "img/game/death.jpg");
+     deathPic(ident.q2, "img/game/waterfalldeath.gif");
     ident.b6b.hidden = true;
 })
 ident.b4.addEventListener('click', function() {
@@ -142,7 +146,6 @@ ident.b6.addEventListener('click', function() {
     itsAlive(ident.q4, ident.b7, ident.b8, ident.b5, ident.b6);
     parentChild('q3', 'b5', 'b6')
     ident.b6b.hidden = true;
-
 })
 ident.b7.addEventListener('click', function() {
     death(ident.q5, ident.b7, ident.b8, ident.deathbtn4);
@@ -154,6 +157,7 @@ ident.b8.addEventListener('click', function() {
 })
 ident.b9.addEventListener('click', function() {
     death(ident.q6, ident.b9, ident.b10, ident.deathbtn5);
+    deathPic(ident.q5, "img/game/cliffdeath.gif");
 })
 ident.b10.addEventListener('click', function() {
     itsAlive(ident.q6, ident.b11, ident.b12);
@@ -161,27 +165,27 @@ ident.b10.addEventListener('click', function() {
 })
 ident.b11.addEventListener('click', function() {
     death(ident.q7, ident.b11, ident.b12, ident.deathbtn6);
+    deathPic(ident.q6, "img/game/shelob.gif");
 })
 ident.b12.addEventListener('click', function() {
     itsAlive(ident.q7, ident.b13, ident.b14);
     parentChild('q6', 'b11', 'b12')
 })
 ident.b13.addEventListener('click', function() {
-    ident.deathbtn7.hidden = false;
-    ident.b13.hidden = true;
-    ident.b14.hidden = true;
+    death(ident.q8, ident.b13, ident.b14, ident.deathbtn7);
+    deathPic(ident.q7, "img/game/samcrying.gif");
 })
 ident.b14.addEventListener('click', function() {
-    ident.b13.hidden = true;
-    ident.b14.hidden = true;
-    ident.reply1.hidden = false;
+    itsAlive(ident.q8, ident.b15, ident.b16);
+    parentChild('q7', 'b13', 'b14')
 })
-b15.addEventListener('click', function() {
+ident.b15.addEventListener('click', function() {
     deathbtn8.hidden = false;
     b15.hidden = true;
     b16.hidden = true;
+    deathPic(ident.q8, "img/game/death.jpg");
 })
-b16.addEventListener('click', function() {
+ident.b16.addEventListener('click', function() {
     b15.hidden = true;
     b16.hidden = true;
     reply1.hidden = false;
@@ -194,6 +198,7 @@ ident.b6b.addEventListener('click', function() {
 })
 ident.b7b.addEventListener('click', function() {
     death(ident.q5b, ident.b7b, ident.b8b, ident.deathbtn4b);
+    deathPic(ident.q4b, "img/game/bilboscary.jpg")
 })
 ident.b8b.addEventListener('click', function() {
     itsAlive(ident.q5b, ident.b9b, ident.b10b);
@@ -201,6 +206,7 @@ ident.b8b.addEventListener('click', function() {
 })
 ident.b9b.addEventListener('click', function() {
     death(ident.q6b, ident.b9b, ident.b10b, ident.deathbtn5b);
+    deathPic(ident.q5b, "img/game/deathqb3.gif");
 })
 ident.b10b.addEventListener('click', function() {
     itsAlive(ident.q6b, ident.b11b, ident.b12b);
@@ -208,6 +214,7 @@ ident.b10b.addEventListener('click', function() {
 })
 ident.b11b.addEventListener('click', function() {
     death(ident.q7b, ident.b11b, ident.b12b, ident.deathbtn6b);
+    deathPic(ident.q6b, "img/game/boromirdeathfunny.jpg");
 })
 ident.b12b.addEventListener('click', function() {
     itsAlive(ident.q7b, ident.b13b, ident.b14b);
@@ -217,6 +224,7 @@ ident.b13b.addEventListener('click', function() {
     ident.deathbtn7b.hidden = false;
     ident.b13b.hidden = true;
     ident.b14b.hidden = true;
+    deathPic(ident.q7b, "img/game/death.jpg");
 })
 ident.b14b.addEventListener('click', function() {
     ident.b13b.hidden = true;
@@ -248,21 +256,21 @@ ident.deathbtn7.addEventListener('click', function() {
     diediedie(ident.q7, ident.b13, ident.b14, ident.deathbtn7,6);
 })
 deathbtn8.addEventListener('click', function() {
-    diediedie(q8, b15, b16, deathbtn8);
+    diediedie(ident.q8, ident.b15, ident.b16, ident.deathbtn8, 7);
 })
 
 
 ident.deathbtn4b.addEventListener('click', function() {
-    diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b,7);
+    diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b,8);
 })
 ident.deathbtn5b.addEventListener('click', function() {
-    diediedie(ident.q5b, ident.b9b, ident.b10b, ident.deathbtn5b,8);
+    diediedie(ident.q5b, ident.b9b, ident.b10b, ident.deathbtn5b,9);
 })
 ident.deathbtn6b.addEventListener('click', function() {
-    diediedie(ident.q6b, ident.b11b, ident.b12b, ident.deathbtn6b,9);
+    diediedie(ident.q6b, ident.b11b, ident.b12b, ident.deathbtn6b,10);
 })
 ident.deathbtn7b.addEventListener('click', function() {
-    diediedie(ident.q7b, ident.b13b, ident.b14b, ident.deathbtn7b,10);
+    diediedie(ident.q7b, ident.b13b, ident.b14b, ident.deathbtn7b,11);
 })
 
 
