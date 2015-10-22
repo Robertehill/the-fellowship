@@ -186,10 +186,7 @@ function loadGame(){
             itsAlive(ident.q7b, ident.b13b, ident.b14b);
             parentChild('q6b', 'b11b', 'b12b');
             break;
-
-    }
-
-
+        }
 }
 function saveGame() {
     var storedPlayer = JSON.stringify(player);
@@ -251,182 +248,182 @@ ident.b1.addEventListener('click', function() {
     deathPic(ident.q1, "img/game/drunkdeath.gif");
 
 
-})
+});
 ident.b2.addEventListener('click', function() {
 	itsAlive(ident.q2, ident.b3, ident.b4);
 	parentChild('q1', 'b1', 'b2');
     player.gameStage = 'event2';
     saveGame();
-})
+});
 ident.b3.addEventListener('click', function() {
     death(ident.q3, ident.b3, ident.b4, ident.deathbtn2);
      deathPic(ident.q2, "img/game/waterfalldeath.gif");
     ident.b6b.hidden = true;
-})
+});
 ident.b4.addEventListener('click', function() {
     itsAlive(ident.q3, ident.b5, ident.b6);
     parentChild('q2', 'b3', 'b4');
     player.gameStage = 'event3';
     saveGame();
     ident.b6b.hidden = false;
-})
+});
 ident.b5.addEventListener('click', function() {
     death(ident.q4, ident.b5, ident.b6, ident.deathbtn3);
     deathPic(ident.q3, "img/game/boromirdeath.gif");
     b6b.hidden = true;
-})
+});
 ident.b6.addEventListener('click', function() {
     itsAlive(ident.q4, ident.b7, ident.b8, ident.b5, ident.b6);
     parentChild('q3', 'b5', 'b6');
     player.gameStage = 'event4';
     saveGame();
     ident.b6b.hidden = true;
-})
+});
 ident.b7.addEventListener('click', function() {
     death(ident.q5, ident.b7, ident.b8, ident.deathbtn4);
     deathPic(ident.q4, "img/game/deadmarshes.gif");
-})
+});
 ident.b8.addEventListener('click', function() {
     itsAlive(ident.q5, ident.b9, ident.b10);
     parentChild('q4', 'b7', 'b8');
     player.gameStage = 'event5';
     saveGame();
-})
+});
 ident.b9.addEventListener('click', function() {
     death(ident.q6, ident.b9, ident.b10, ident.deathbtn5);
     deathPic(ident.q5, "img/game/cliffdeath.gif");
-})
+});
 ident.b10.addEventListener('click', function() {
     itsAlive(ident.q6, ident.b11, ident.b12);
     parentChild('q5', 'b9', 'b10');
     player.gameStage = 'event6';
     saveGame();
-})
+});
 ident.b11.addEventListener('click', function() {
     death(ident.q7, ident.b11, ident.b12, ident.deathbtn6);
     deathPic(ident.q6, "img/game/shelob.gif");
-})
+});
 ident.b12.addEventListener('click', function() {
     itsAlive(ident.q7, ident.b13, ident.b14);
     parentChild('q6', 'b11', 'b12');
     player.gameStage = 'event7';
     saveGame();
-})
+});
 ident.b13.addEventListener('click', function() {
     death(ident.q8, ident.b13, ident.b14, ident.deathbtn7);
     deathPic(ident.q7, "img/game/samcrying.gif");
 })
 ident.b14.addEventListener('click', function() {
     itsAlive(ident.q8, ident.b15, ident.b16);
-    parentChild('q7', 'b13', 'b14')
+    parentChild('q7', 'b13', 'b14');
     player.gameStage = 'event8';
     saveGame();
-})
+});
 ident.b15.addEventListener('click', function() {
     deathbtn8.hidden = false;
     b15.hidden = true;
     b16.hidden = true;
     deathPic(ident.q8, "img/game/death.jpg");
-})
+});
 ident.b16.addEventListener('click', function() {
     b15.hidden = true;
     b16.hidden = true;
     reply1.hidden = false;
     player.gameStage = 'event1';
     saveGame();
-})
+});
 
 ident.b6b.addEventListener('click', function() {
     ident.b6b.hidden = true;
     itsAlive(ident.q4b, ident.b7b, ident.b8b, ident.b5, ident.b6b);
-    parentChild('q3', 'b5', 'b6')
+    parentChild('q3', 'b5', 'b6');
     player.gameStage = 'event4b';
     saveGame();
-})
+});
 ident.b7b.addEventListener('click', function() {
     death(ident.q5b, ident.b7b, ident.b8b, ident.deathbtn4b);
     deathPic(ident.q4b, "img/game/bilboscary.jpg")
 })
 ident.b8b.addEventListener('click', function() {
     itsAlive(ident.q5b, ident.b9b, ident.b10b);
-    parentChild('q4b', 'b7b', 'b8b')
+    parentChild('q4b', 'b7b', 'b8b');
     player.gameStage = 'event5b';
     saveGame();
-})
+});
 ident.b9b.addEventListener('click', function() {
     death(ident.q6b, ident.b9b, ident.b10b, ident.deathbtn5b);
     deathPic(ident.q5b, "img/game/deathqb3.gif");
-})
+});
 ident.b10b.addEventListener('click', function() {
     itsAlive(ident.q6b, ident.b11b, ident.b12b);
-    parentChild('q5b', 'b9b', 'b10b')
+    parentChild('q5b', 'b9b', 'b10b');
     player.gameStage = 'event6b';
     saveGame();
-})
+});
 ident.b11b.addEventListener('click', function() {
     death(ident.q7b, ident.b11b, ident.b12b, ident.deathbtn6b);
     deathPic(ident.q6b, "img/game/boromirdeathfunny.jpg");
-})
+});
 ident.b12b.addEventListener('click', function() {
     itsAlive(ident.q7b, ident.b13b, ident.b14b);
-    parentChild('q6b', 'b11b', 'b12b')
+    parentChild('q6b', 'b11b', 'b12b');
     player.gameStage = 'event7b';
     saveGame();
-})
+});
 ident.b13b.addEventListener('click', function() {
     ident.deathbtn7b.hidden = false;
     ident.b13b.hidden = true;
     ident.b14b.hidden = true;
     deathPic(ident.q7b, "img/game/death.jpg");
-})
+});
 ident.b14b.addEventListener('click', function() {
     ident.b13b.hidden = true;
     ident.b14b.hidden = true;
     ident.reply2.hidden = false;
     player.gameStage = 'event1';
     saveGame();
-})
+});
 
 
 ident.deathbtn1.addEventListener('click', function () {
     diediedie(ident.q1, ident.b1, ident.b2, ident.deathbtn1,0);
-})
+});
 ident.deathbtn2.addEventListener('click', function () {
     diediedie(ident.q2, ident.b3, ident.b4, ident.deathbtn2,1);
-})
+});
 ident.deathbtn3.addEventListener('click', function() {
     diediedie(ident.q3, ident.b5, ident.b6, ident.deathbtn3,2);
     ident.b6b.hidden = false;
-})
+});
 ident.deathbtn4.addEventListener('click', function() {
     diediedie(ident.q4, ident.b7, ident.b8, ident.deathbtn4,3);
-})
+});
 ident.deathbtn5.addEventListener('click', function() {
     diediedie(ident.q5, ident.b9, ident.b10, ident.deathbtn5,4);
-})
+});
 ident.deathbtn6.addEventListener('click', function() {
     diediedie(ident.q6, ident.b11, ident.b12, ident.deathbtn6,5);
-})
+});
 ident.deathbtn7.addEventListener('click', function() {
     diediedie(ident.q7, ident.b13, ident.b14, ident.deathbtn7,6);
-})
+});
 deathbtn8.addEventListener('click', function() {
     diediedie(ident.q8, ident.b15, ident.b16, ident.deathbtn8, 7);
-})
+});
 
 
 ident.deathbtn4b.addEventListener('click', function() {
     diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b,8);
-})
+});
 ident.deathbtn5b.addEventListener('click', function() {
     diediedie(ident.q5b, ident.b9b, ident.b10b, ident.deathbtn5b,9);
-})
+});
 ident.deathbtn6b.addEventListener('click', function() {
     diediedie(ident.q6b, ident.b11b, ident.b12b, ident.deathbtn6b,10);
-})
+});
 ident.deathbtn7b.addEventListener('click', function() {
     diediedie(ident.q7b, ident.b13b, ident.b14b, ident.deathbtn7b,11);
-})
+});
 
 
 
