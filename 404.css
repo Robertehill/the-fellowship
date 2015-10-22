@@ -1,0 +1,24 @@
+* {
+  font-family: 'Lusitana', serif;
+}
+body {
+  background-color: #262623;
+  color: black;
+}
+
+h1, h2 {
+  color: #A69856;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: -.5px .5px .5px #000;
+}
+
+.road-pic {
+width: 80%;
+  min-width: 300px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: -1em;
+}
