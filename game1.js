@@ -12,6 +12,8 @@ var b11 = document.getElementById('b11');
 var b12 = document.getElementById('b12');
 var b13 = document.getElementById('b13');
 var b14 = document.getElementById('b14');
+var b15 = document.getElementById('b15');
+var b16 = document.getElementById('b16');
 var b6b = document.getElementById('b6b');
 var b7b = document.getElementById('b7b');
 var b8b = document.getElementById('b8b');
@@ -116,7 +118,6 @@ b6.addEventListener('click', function() {
     itsAlive(q4, b7, b8, b5, b6);
     parentChild('q3', 'b5', 'b6')
     b6b.hidden = true;
-
 })
 b7.addEventListener('click', function() {
     death(q5, b7, b8, deathbtn4);
@@ -149,7 +150,16 @@ b14.addEventListener('click', function() {
     b14.hidden = true;
     reply1.hidden = false;
 })
-
+b15.addEventListener('click', function() {
+    deathbtn8.hidden = false;
+    b15.hidden = true;
+    b16.hidden = true;
+})
+b16.addEventListener('click', function() {
+    b15.hidden = true;
+    b16.hidden = true;
+    reply1.hidden = false;
+})
 
 b6b.addEventListener('click', function() {
     b6b.hidden = true;
@@ -211,12 +221,14 @@ deathbtn6.addEventListener('click', function() {
 deathbtn7.addEventListener('click', function() {
     diediedie(q7, b13, b14, deathbtn7);
 })
+deathbtn8.addEventListener('click', function() {
+    diediedie(q8, b15, b16, deathbtn8);
+})
 
 
 deathbtn4b.addEventListener('click', function() {
     diediedie(q4b, b7b, b8b, deathbtn4b);
 })
-
 deathbtn5b.addEventListener('click', function() {
     diediedie(q5b, b9b, b10b, deathbtn5b);
 })
