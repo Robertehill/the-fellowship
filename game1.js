@@ -65,7 +65,7 @@ function loadGame(){
     player.pName = parseChar.pName;
     player.species = parseChar.species;
     player.gameStage = parseChar.gameStage;
-    // tried to make a function to bevent D.R.Y. but could not figure it out
+    // tried to make a function to prevent D.R.Y. but could not figure it out
     switch(player.gameStage){
         case 'event2':
             itsAlive(ident.q2, ident.b3, ident.b4);
@@ -215,7 +215,7 @@ function diediedie (q, btn1, btn2, deathbtn, array) {
 
     var parent = document.getElementsByClassName("gameText")[array];
     var child = document.getElementsByClassName("deathPic")[0];
-    console.log("parent ="+parent+' child = '+child);
+    // console.log("parent ="+parent+' child = '+child);
     parent.removeChild(child);
 
 }
@@ -223,13 +223,13 @@ function itsAlive (q, btn1, btn2) {
 	q.hidden = false;
 	btn1.hidden = false;
 	btn2.hidden = false;
-    console.log("hide" + q +' '+btn1+' '+ btn2);
+    // console.log("hide" + q +' '+btn1+' '+ btn2);
 }
 function parentChild (q, btn1, btn2) {
 	var parent = document.getElementById(q);
 	var child1 = document.getElementById(btn1);
 	var child2 = document.getElementById(btn2);
-    console.log('remove '+btn1+' '+ btn2);
+    // console.log('remove '+btn1+' '+ btn2);
     parent.removeChild(child1);
     parent.removeChild(child2);
 }
