@@ -53,7 +53,6 @@
 };
 
 var player = {
-
     pName: 'Guest',
     species: 'hobbit',
     gameStage: 'event1'
@@ -210,12 +209,12 @@ function diediedie (q, btn1, btn2, deathbtn, array) {
 	btn1.hidden = false;
 	btn2.hidden = false;
 	deathbtn.hidden = true;
-    console.log('hide' + q +' '+btn1+' '+ btn2);
-    console.log('unhide' + deathbtn);
+    // console.log('hide' + q +' '+btn1+' '+ btn2);
+    // console.log('unhide' + deathbtn);
 
     var parent = document.getElementsByClassName("gameText")[array];
     var child = document.getElementsByClassName("deathPic")[0];
-    console.log("parent ="+parent+' child = '+child);
+    // console.log("parent ="+parent+' child = '+child);
     parent.removeChild(child);
 
 }
