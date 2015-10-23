@@ -1,4 +1,4 @@
-var ident = {
+ var ident = {
     b1: document.getElementById('b1'),
     b2: document.getElementById('b2'),
     b3: document.getElementById('b3'),
@@ -53,19 +53,19 @@ var ident = {
 };
 
 var player = {
+
     pName: 'Guest',
     species: 'hobbit',
     gameStage: 'event1'
 };
 var savedChar = localStorage.getItem("LOTR");
-
 function loadGame(){
     var savedChar = localStorage.getItem("LOTR");
     var parseChar = JSON.parse(savedChar);
     player.pName = parseChar.pName;
     player.species = parseChar.species;
     player.gameStage = parseChar.gameStage;
-
+    // tried to make a function to bevent D.R.Y. but could not figure it out
     switch(player.gameStage){
         case 'event2':
             itsAlive(ident.q2, ident.b3, ident.b4);
@@ -188,10 +188,10 @@ function saveGame() {
     var storedPlayer = JSON.stringify(player);
     localStorage.setItem("LOTR", storedPlayer);
 }
-
 if (savedChar != null){
     loadGame();
 };
+//stupid elfs need "an" not "a"
 if (player.species === "elf"){
     document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are an ' + player.species +'!';
 }
@@ -205,7 +205,6 @@ function death (q, btn1, btn2, deathbtn) {
 	btn2.hidden = true;
 	deathbtn.hidden = false;
 }
-
 function diediedie (q, btn1, btn2, deathbtn, array) {
 	q.hidden = false;
 	btn1.hidden = false;
@@ -220,14 +219,12 @@ function diediedie (q, btn1, btn2, deathbtn, array) {
     parent.removeChild(child);
 
 }
-
 function itsAlive (q, btn1, btn2) {
 	q.hidden = false;
 	btn1.hidden = false;
 	btn2.hidden = false;
     console.log("hide" + q +' '+btn1+' '+ btn2);
 }
-
 function parentChild (q, btn1, btn2) {
 	var parent = document.getElementById(q);
 	var child1 = document.getElementById(btn1);
@@ -240,16 +237,13 @@ function deathPic(q, src) {
     var blah = q.getElementsByClassName("gameText")[0];
     var deathpic = document.createElement('img');
     deathpic.src = src;
-    // deathpic.src = "img/game/drunkdeath.gif";
     deathpic.className = 'deathPic';
     blah.appendChild(deathpic);
 }
-
+//story line buttons
 ident.b1.addEventListener('click', function() {
 	death(ident.q2, ident.b1, ident.b2, ident.deathbtn1);
     deathPic(ident.q1, "img/game/drunkdeath.gif");
-
-
 });
 ident.b2.addEventListener('click', function() {
 	itsAlive(ident.q2, ident.b3, ident.b4);
@@ -334,7 +328,7 @@ ident.b16.addEventListener('click', function() {
     player.gameStage = 'event1';
     saveGame();
 });
-
+//start alt story line buttons here
 ident.b6b.addEventListener('click', function() {
     ident.b6b.hidden = true;
     itsAlive(ident.q4b, ident.b7b, ident.b8b, ident.b5, ident.b6b);
@@ -385,8 +379,7 @@ ident.b14b.addEventListener('click', function() {
     player.gameStage = 'event1';
     saveGame();
 });
-
-
+// death buttons, moves user back 1 event.
 ident.deathbtn1.addEventListener('click', function () {
     diediedie(ident.q1, ident.b1, ident.b2, ident.deathbtn1,0);
 });
@@ -412,8 +405,7 @@ ident.deathbtn7.addEventListener('click', function() {
 deathbtn8.addEventListener('click', function() {
     diediedie(ident.q8, ident.b15, ident.b16, ident.deathbtn8, 7);
 });
-
-
+// alt story death butons
 ident.deathbtn4b.addEventListener('click', function() {
     diediedie(ident.q4b, ident.b7b, ident.b8b, ident.deathbtn4b,8);
 });

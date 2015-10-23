@@ -6,11 +6,10 @@ function div_hide(){
 	document.getElementById('blackout').style.display = "none";
 }
 var player = {
-	pName: null,
+	pName: null, // set to null here for testing
 	species: null,
 	gameStage: null
 };
-//var species;
 //processes char Creation form data and saves to local storage-REH/GLG
 var startGame = function(e) {
   e.preventDefault();
@@ -84,10 +83,8 @@ var startGame = function(e) {
 	else if (hobbit >= dwarf && hobbit >= elf) {
 		player.species = "hobbit";
 	}
-	//maybe an "else" statement here for ties
-	//logs name from input
 	if(document.getElementById('playerName').value ===""){
-		alert("Please enter a name")
+		alert("Please enter a name");
 		return;
 	}
 	player.pName = document.getElementById('playerName').value;
