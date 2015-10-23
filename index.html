@@ -29,7 +29,7 @@
   <div id="popup">
     <form id="charCreationForm" method="post" name="form">
 
-        <img id="close" src="img/closeButton.png" onclick ="div_hide()">
+        <img id="close" src="img/closeButton3.png" onclick ="div_hide()">
         <p class="form-text">Tell us your name:
         <input type="text" placeholder="Name" id="playerName"> </p>
 
@@ -53,20 +53,20 @@
         <input type="radio" name="q4" value="dwarf" />Front and center<br />
         <input type="radio" name="q4" value="hobbit" />In the kitchen eating second breakfast<br /><br />
 
-        <button type="click" id="startGame">Start Game!</button>
+        <button type="click" id="startGame">Play!</button>
     </form>
  </div>
 </div>
 
 
-    <h2>Your adventure awaits....</h2>
+    <h2 class="gameIntro">Your adventure awaits...</h2>
    <article class="welcome">
     <section>
 
     <img class="gamePic" src="img/fellowship-index.jpg">
-    <p class="gameText">Join us for a journey through Middle Earth as Frodo and the Fellowship of the Ring battle Saruman. Become a character in Middle Earth and choose your own path with our game. Fight the Uruk-hai and Orcs, drink ale with the Hobbits and explore Middle Earth. Start your adventure now!</p>
+    <p id="beginning" class="gameText">Join us for a journey through Middle Earth as Frodo and the Fellowship of the Ring battle Saruman. Become a character in Middle Earth and choose your own path with our game. Fight the Uruk-hai and Orcs, drink ale with the Hobbits and explore Middle Earth.</p>
 
-     <button id="chooseChar" onclick="div_show()">Play!</button>
+     <button id="chooseChar" onclick="div_show()">Start your adventure now!</button>
     </section>
   </article>
 </main>
