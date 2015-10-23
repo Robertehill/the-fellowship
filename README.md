@@ -23,14 +23,19 @@ Morning 2: Robin and Gina worked in game1.js to link up buttons and create funct
 Afternoon:	Gina and Robert put in the second branch inside game1.js 
 			Pat and Robin worked on images and styling
 
-Thursday, October 22nd:
-Morning: Gina put in the storyline for the second branch and inserted images. Also figured out how to close the form on index.html
-		Robert and Gina worked adding deathPic to the diediedie function and making sure the buttons all worked properly.
-		Robin and Pat worked on responsiveness of the pages
+Thursday, October 22nd
+Morning: 	Gina put in the storyline for the second branch and inserted images. Also figured out how to close the form on index.html
+			Robert and Gina worked adding deathPic to the diediedie function and making sure the buttons all worked properly.
+			Robin and Pat worked on responsiveness of the pages
 
-Afternoon: Group wrote 'about me's, worked on presentation
-		Robert and Gina continued to work on persistence
-		Robin and Pat finished up stylizing
-		Robin made a 404 page
+Afternoon: 	Group wrote 'about me's, worked on presentation
+			Robert and Gina continued to work on persistence
+			Robin and Pat finished up stylizing
+			Robin made a 404 page
 
-
+Friday, October 23rd
+Morning: 	Gina updated README.md
+			Pat finished styling
+			Robin gave images alt and title tags
+			Robert cleaned up JavaScript
+		
