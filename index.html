@@ -10,71 +10,66 @@
 </head>
 <body class="home" id="indexBody">
 
-  <header>
-   <nav>
-      <ul>
-        <li>
-    <a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a>
-
-      </li>
- 
-        <li><a class="game" title="Game" alt="game" href="game.html">Game</a></li>
-        <li><a class="about" title="Game" alt="game" href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+ <nav>
+    <ul>
+      <li><a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a></li>
+      <li><a class="game" title="Game" alt="game" href="game.html">Game</a></li>
+      <li><a class="about" title="Game" alt="game" href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main>
-  <div id="blackout">
+<div id="blackout">
   <div id="popup">
     <form id="charCreationForm" method="post" name="form">
+      <img id="close" src="img/closeButton3.png" onclick ="div_hide()">
+      <p class="form-text">Tell us your name:
+      <input type="text" placeholder="Name" id="playerName"> </p>
 
-        <img id="close" src="img/closeButton.png" onclick ="div_hide()">
-        <p class="form-text">Tell us your name:
-        <input type="text" placeholder="Name" id="playerName"> </p>
+      <p class="form-text">What's your idea of the perfect meal?</p>
+      <input type="radio" name="q1" value="elf" checked />A salad picked from a fresh garden<br />
+      <input type="radio" name="q1" value="dwarf"  />A big chunk of beef and a beer<br />
+      <input type="radio" name="q1" value="hobbit"  />A nice, hot rabbit stew<br />
 
-        <p class="form-text">What's your idea of the perfect meal?</p>
-        <input type="radio" name="q1" value="elf" checked />A salad picked from a fresh garden<br />
-        <input type="radio" name="q1" value="dwarf"  />A big chunk of beef and a beer<br />
-        <input type="radio" name="q1" value="hobbit"  />A nice, hot rabbit stew<br />
+      <p class="form-text">What's your weapon of choice?</p>
+      <input type="radio" name="q2" value="elf" checked />Bow and arrow<br />
+      <input type="radio" name="q2" value="dwarf" />Axe<br />
+      <input type="radio" name="q2" value="hobbit" />Rocks<br />
 
-        <p class="form-text">What's your weapon of choice?</p>
-        <input type="radio" name="q2" value="elf" checked />Bow and arrow<br />
-        <input type="radio" name="q2" value="dwarf" />Axe<br />
-        <input type="radio" name="q2" value="hobbit" />Rocks<br />
+      <p class="form-text">What's your idea of the perfect vacation?</p>
+      <input type="radio" name="q3" value="elf" checked />Communing with the forest<br />
+      <input type="radio" name="q3" value="dwarf" />Drinking in a mine<br />
+      <input type="radio" name="q3" value="hobbit"  />Spending the week at the Green Dragon singing and drinking<br />
 
-        <p class="form-text">What's your idea of the perfect vacation?</p>
-        <input type="radio" name="q3" value="elf" checked />Communing with the forest<br />
-        <input type="radio" name="q3" value="dwarf" />Drinking in a mine<br />
-        <input type="radio" name="q3" value="hobbit"  />Spending the week at the Green Dragon singing and drinking<br />
+      <p class="form-text">Where can you be found when a battle is about to begin?</p>
+      <input type="radio" name="q4" value="elf" checked />At the top of the helm<br />
+      <input type="radio" name="q4" value="dwarf" />Front and center<br />
+      <input type="radio" name="q4" value="hobbit" />In the kitchen eating second breakfast<br /><br />
 
-        <p class="form-text">Where can you be found when a battle is about to begin?</p>
-        <input type="radio" name="q4" value="elf" checked />At the top of the helm<br />
-        <input type="radio" name="q4" value="dwarf" />Front and center<br />
-        <input type="radio" name="q4" value="hobbit" />In the kitchen eating second breakfast<br /><br />
-
-        <button type="click" id="startGame">Start Game!</button>
+      <button type="click" id="startGame">Play!</button>
     </form>
  </div>
 </div>
 
-
-    <h2>Your adventure awaits....</h2>
-   <article class="welcome">
+  <h2 class="gameIntro">Your adventure awaits...</h2>
+  <article class="welcome">
     <section>
 
     <img class="gamePic" src="img/fellowship-index.jpg">
-    <p class="gameText">Join us for a journey through Middle Earth as Frodo and the Fellowship of the Ring battle Saruman. Become a character in Middle Earth and choose your own path with our game. Fight the Uruk-hai and Orcs, drink ale with the Hobbits and explore Middle Earth. Start your adventure now!</p>
+    <p id="beginning" class="gameText">Join us for a journey through Middle Earth as Frodo and the Fellowship of the Ring battle Saruman. Become a character in Middle Earth and choose your own path with our game. Fight the Uruk-hai and Orcs, drink ale with the Hobbits and explore Middle Earth.</p>
 
-     <button id="chooseChar" onclick="div_show()">Play!</button>
+    <button id="chooseChar" onclick="div_show()">Start your adventure now!</button>
     </section>
   </article>
 </main>
 
-  <footer>Copyright 2015 by the Fellowship/CodeFellows SEA-B34-Foundations
-  </footer>
+<footer>
+Copyright 2015 by the Fellowship/CodeFellows SEA-B34-Foundations
+</footer>
 
-  <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="index.js"></script>
 
 </body>
 </html5>

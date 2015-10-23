@@ -7,8 +7,48 @@ body {
 	color: black;
 }
 
+footer {
+	color: #D9CE96;
+	font-size: 10px;
+}
 
-h1 {
+a {
+	text-decoration: none;
+	color: #2a5db0;
+}
+
+body.game a.game, body.about a.about {
+	text-decoration: underline;
+}
+
+#indexBody {
+	background: url("img/background-img-3.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
+#gameBody {
+	background: url("img/background-img-5.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
+#aboutBody {
+	background: url("img/background-img-4.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
+h1, h2 {
 	color: #A69856;
 	text-align: center;
 	font-size: 3em;
@@ -16,11 +56,8 @@ h1 {
 }
 
 h2 {
-	color: #A69856;
-	text-align: center;
 	font-size: 2.5em;
 	margin: -3px;
-	text-shadow: -.5px .5px .5px #000;
 }
 
 h3#intro {
@@ -28,67 +65,77 @@ h3#intro {
 	font-weight: bold;
 }
 
+.form-text {
+	font-weight: bold;
+}
+
+input[type="text"] {
+	display: inline-block;
+	margin-left: 1em;
+	width: 60%;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+
+button:hover {
+  opacity: .65;
+  cursor: pointer;
+}
+
+button {
+	background: #F2EBC9;
+	color: #736830;
+	border: 1px solid #736830;
+	font-size: 1.25em;
+}
+
+button#chooseChar {
+	width: 40%;
+	margin: 0px auto;
+	text-align: center;
+	margin: auto;
+	height: 3em;
+}
+
+button#startGame {
+	width: 30%;
+	margin: 0px auto;
+	text-align: center;
+	margin: auto;
+	height: 3em;
+	margin-bottom: .5em;
+}
+
+button.game {
+	width: 80%;
+	min-height: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: 1em;
+	text-align: left;
+}
+
 article.welcome {
 	margin: auto;
 	text-align: center;
 }
 
-button#chooseChar {
-	background: #F2EBC9;
-	color: #736830;
-	width: 30%;
-	margin: 0px auto;
-	text-align: center;
-	margin: auto;
-	/*padding-left: 1em;*/
-	border: 1px solid #736830;
+#beginning {
 	font-size: 1.25em;
-	height: 3em;
-	/*margin-top: 1em;*/
 }
-button#startGame {
-	background: #F2EBC9;
-	color: #736830;
-	width: 30%;
-	margin: 0px auto;
-	text-align: center;
-	margin: auto;
-	/*padding-left: 1em;*/
-	border: 1px solid #736830;
+
+.gameIntro {
+	padding-top: 20px;
+}
+
+#beginning {
 	font-size: 1.25em;
-	height: 3em;
-	/*margin-top: 1em;*/
-	margin-bottom: .5em;
-}
-button.game {
-	background: #F2EBC9;
-	color: #736830;
-	width: 80%;
-	min-height: 4em;
-	/*height: 4em;*/
-	font-size: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	padding-left: 1em;
-	border: 1px solid #736830;
 }
 
-footer {
-	color: #D9CE96;
-	font-size: 10px;
+a:hover {
+	color: #D9723D;
+	cursor: pointer !important;
 }
-
-input[type="text"] {
-  display: inline-block;
-  margin-left: 1em;
-  width: 60%;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-}
-.form-text {
-	font-weight: bold;
-}
-
-
