@@ -8,27 +8,23 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
 </head>
+
 <body class="game" id="">
 <div id="gameBody">
 
-
-  <header>
-   <nav>
-      <ul>
-        <li>
-    <a href="index.html"><img id="header-logo" src="img/header-logo.png" /></a>
-
-      </li>
-
-        <li><a class="game" title="Game" alt="game" href="game.html">Game</a></li>
-        <li><a class="about" title="Game" alt="game" href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+ <nav>
+    <ul>
+      <li><a title="Home page" alt="home page" href="index.html"><img id="header-logo" src="img/header-logo.png" /></a></li>
+      <li><a class="game" title="Game page" alt="game page" href="game.html">Game</a></li>
+      <li><a class="about" title="Game page" alt="game page" href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
 
 <!-- GLG/RS -->
 <main>
-  <h2 id="gameIntro">Your adventure begins...</h2>
+  <h2 class="gameIntro">Your adventure begins...</h2>
 <section><h3 id="intro"></h3></section>
 <section id="q1">
   <img class="gamePic" src="img/game/q1.jpg" alt="Hobbit bar" title="Hobbits at the Green Dragon" />
@@ -45,7 +41,6 @@
   <p class="gameText">You arrive in Rivendell and gasp in awe of how beautiful it is. The elves are so kind, and the food, while lacking meat, is delicious. There is also a never-ending supply of wine. A council is held for the fate of the Ring and the Fellowship of the Ring is formed to take it Mordor and destroy it at Mount Doom. Do you join the Fellowship and save Middle Earth? Or do you stay in Rivendell and enjoy the company of elves?</p>
   <button type="click" id="b4" class="game" hidden>You think of your friends and family - Of course you want to save Middle Earth!</button><br /><br />
   <button type="click" id="b3" class="game" hidden>Stay with the elves and live a peaceful life.</button>
-
   <button type="click" id="deathbtn2" class="game" hidden>Until you drink too much wine and fall into the ford. Go back a step!</button>
 </section>
 
@@ -130,7 +125,6 @@
   <p class="gameText">You fought the battle of Helms Deep and came out alive. Now you must gather armies of Men to fight the battle against Sauron. You, Aragorn, Gimli, Legolas and warriors of Rohan set out for another battle. Elrond, elf king and father of Arwen, comes to tell Aragorn that Arwen is dying and gives him a sword forged from Narsil. This was the sword that Isilidur, Aragorn's forefather, used to cut off the Ring from Sauron. Elrond tells Aragorn he must take the Path of the Dead if he wants to defeat the Corsair army. Do you join Aragorn, Legolas and Gimli to recruit the Army of the Dead? Or stay with King Theoden and the army of Rohan?</p>
   <button type="click" id="b12b" class="game" hidden>Join Aragorn, Legolas and Gimli. What's another near death adventure?</button><br /><br />
   <button type="click" id="b11b" class="game" hidden>Sit this one out and stay with King Theoden.</button>
-
   <button type="click" id="deathbtn6b" class="game" hidden>You decide last minute to join Aragorn and die before you can find him. Go back one step!</button>
 </section>
 
@@ -162,8 +156,12 @@
 
 </main>
 
-  <footer>Copyright 2015 by the Fellowship/CodeFellows SEA-B34-Foundations</footer>
+<footer>
+Copyright 2015 by the Fellowship/CodeFellows SEA-B34-Foundations
+</footer>
+  
   <script type="text/javascript" src="game1.js"></script>
 </div>
 </body>
+
 </html5>
