@@ -33,10 +33,14 @@ article.welcome {
 	text-align: center;
 }
 
+#beginning {
+	font-size: 1.25em;
+}
+
 button#chooseChar {
 	background: #F2EBC9;
 	color: #736830;
-	width: 30%;
+	width: 40%;
 	margin: 0px auto;
 	text-align: center;
 	margin: auto;
@@ -64,14 +68,18 @@ button.game {
 	background: #F2EBC9;
 	color: #736830;
 	width: 80%;
-	min-height: 4em;
+	min-height: 3em;
 	/*height: 4em;*/
 	font-size: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+	padding-top: .5em;
+	padding-bottom: .5em;
 	padding-left: 1em;
 	border: 1px solid #736830;
+	/*font-weight: bold;*/
+	font-size: 1.25em;
 }
 
 footer {
@@ -91,4 +99,7 @@ input[type="text"] {
 	font-weight: bold;
 }
 
+#gameIntro {
+	padding-top: 20px;
+}
 

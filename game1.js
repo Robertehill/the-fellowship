@@ -193,7 +193,7 @@ if (savedChar != null){
     loadGame();
 };
 if (player.species === "elf"){
-    document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are an ' + player.species +'!';
+    document.getElementById('intro').innerHTML = 'Congrats <em>' + player.pName + '</em>, you are an <strong>' + player.species +'</strong>!';
 }
 else{
    document.getElementById('intro').innerHTML = 'Congrats ' + player.pName + ', you are a ' + player.species +'!';
